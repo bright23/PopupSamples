@@ -9,24 +9,42 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isPopupShowing = false
+    @State var isInvitePopupShowing = false
     @State var backgroundColor = Color.white
     
     var body: some View {
         ZStack {
-            Button {
-                withAnimation {
-                    isPopupShowing = true
-                    backgroundColor = Color.gray
+            VStack {
+                Button {
+                    withAnimation {
+                        isPopupShowing = true
+                        backgroundColor = Color.gray
+                    }
+                } label: {
+                    Text("show popup")
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color.yellow)
+                        .cornerRadius(12)
                 }
-            } label: {
-                Text("show popup")
-                    .padding()
-                    .foregroundColor(Color.white)
-                    .background(Color.yellow)
-                    .cornerRadius(12)
+                Button {
+                    withAnimation {
+                        isInvitePopupShowing = true
+                        backgroundColor = Color.gray
+                    }
+                } label: {
+                    Text("show invite popup")
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color.yellow)
+                        .cornerRadius(12)
+                }
             }
             if isPopupShowing {
                 PopupView(isPresent: $isPopupShowing, parentBackgroundColor: $backgroundColor)
+            }
+            if isInvitePopupShowing {
+                InvitedPopupView(isPresent: $isInvitePopupShowing, parentBackgroundColor: $backgroundColor)
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
