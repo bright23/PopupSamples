@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3A4B31E286F544900033BDF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A4B31D286F544900033BDF /* PopupView.swift */; };
+		C3A4B320286F578900033BDF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A4B31F286F578900033BDF /* ColorExtension.swift */; };
 		C3DB7BE4286F2ACB000985F6 /* PopupSamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB7BE3286F2ACB000985F6 /* PopupSamplesApp.swift */; };
 		C3DB7BE6286F2ACB000985F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB7BE5286F2ACB000985F6 /* ContentView.swift */; };
 		C3DB7BE8286F2AD6000985F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB7BE7286F2AD6000985F6 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3A4B31D286F544900033BDF /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		C3A4B31F286F578900033BDF /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C3DB7BE0286F2ACB000985F6 /* PopupSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopupSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DB7BE3286F2ACB000985F6 /* PopupSamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSamplesApp.swift; sourceTree = "<group>"; };
 		C3DB7BE5286F2ACB000985F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				C3DB7BE3286F2ACB000985F6 /* PopupSamplesApp.swift */,
 				C3DB7BE5286F2ACB000985F6 /* ContentView.swift */,
+				C3A4B31D286F544900033BDF /* PopupView.swift */,
+				C3A4B31F286F578900033BDF /* ColorExtension.swift */,
 				C3DB7BE7286F2AD6000985F6 /* Assets.xcassets */,
 				C3DB7BE9286F2AD6000985F6 /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A4B31E286F544900033BDF /* PopupView.swift in Sources */,
 				C3DB7BE6286F2ACB000985F6 /* ContentView.swift in Sources */,
 				C3DB7BE4286F2ACB000985F6 /* PopupSamplesApp.swift in Sources */,
+				C3A4B320286F578900033BDF /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +283,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +313,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
