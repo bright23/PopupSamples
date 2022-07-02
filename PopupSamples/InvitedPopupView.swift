@@ -71,7 +71,7 @@ struct InvitedPopupView: View {
 
 struct InvitedPopupView_Previews: PreviewProvider {
     @State static var isPresent = true
-    @State static var parentBackgroundColor = Color.white
+    @State static var parentBackgroundColor = Color.gray
     
     static var previews: some View {
         InvitedPopupView(isPresent: $isPresent, parentBackgroundColor: $parentBackgroundColor)

@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var isPopupShowing = false
     @State var isInvitePopupShowing = false
+    @State var isCouponPopupShowing = false
     @State var backgroundColor = Color.white
     
     var body: some View {
@@ -39,12 +40,28 @@ struct ContentView: View {
                         .background(Color.yellow)
                         .cornerRadius(12)
                 }
+                
+                Button {
+                    withAnimation {
+                        isCouponPopupShowing = true
+                        backgroundColor = Color.gray
+                    }
+                } label: {
+                    Text("show coupon popup")
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color.yellow)
+                        .cornerRadius(12)
+                }
             }
             if isPopupShowing {
                 PopupView(isPresent: $isPopupShowing, parentBackgroundColor: $backgroundColor)
             }
             if isInvitePopupShowing {
                 InvitedPopupView(isPresent: $isInvitePopupShowing, parentBackgroundColor: $backgroundColor)
+            }
+            if isCouponPopupShowing {
+                CouponPopupView(isPresent: $isCouponPopupShowing, parentBackgroundColor: $backgroundColor)
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
