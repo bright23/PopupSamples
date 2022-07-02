@@ -1,5 +1,5 @@
 //
-//  PopupView.swift
+//  AlarmPopupView.swift
 //  PopupSamples
 //
 //  Created by Wataru Fujiwara on 2022/07/02.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PopupView: View {
+struct AlarmPopupView: View {
     @Binding var isPresent: Bool
     @Binding var parentBackgroundColor: Color
     
@@ -46,11 +46,11 @@ struct PopupView: View {
     }
 }
 
-struct PopupView_Previews: PreviewProvider {
+struct AlarmPopupView_Previews: PreviewProvider {
     @State static var isPresent = true
     @State static var parentBackgroundColor = Color.white
     
     static var previews: some View {
-        PopupView(isPresent: $isPresent, parentBackgroundColor: $parentBackgroundColor)
+        AlarmPopupView(isPresent: $isPresent, parentBackgroundColor: $parentBackgroundColor)
     }
 }

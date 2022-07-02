@@ -8,66 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isPopupShowing = false
-    @State var isInvitePopupShowing = false
-    @State var isCouponPopupShowing = false
-    @State var backgroundColor = Color.white
     
-    var body: some View {
-        ZStack {
-            VStack {
-                Button {
-                    withAnimation {
-                        isPopupShowing = true
-                        backgroundColor = Color.gray
-                    }
-                } label: {
-                    Text("show popup")
-                        .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color.yellow)
-                        .cornerRadius(12)
-                }
-                Button {
-                    withAnimation {
-                        isInvitePopupShowing = true
-                        backgroundColor = Color.gray
-                    }
-                } label: {
-                    Text("show invite popup")
-                        .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color.yellow)
-                        .cornerRadius(12)
-                }
-                
-                Button {
-                    withAnimation {
-                        isCouponPopupShowing = true
-                        backgroundColor = Color.gray
-                    }
-                } label: {
-                    Text("show coupon popup")
-                        .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color.yellow)
-                        .cornerRadius(12)
-                }
+    @State private var showingModal = false
+        
+        var body: some View {
+            Button("Show Modal") {
+                showingModal = true
             }
-            if isPopupShowing {
-                PopupView(isPresent: $isPopupShowing, parentBackgroundColor: $backgroundColor)
-            }
-            if isInvitePopupShowing {
-                InvitedPopupView(isPresent: $isInvitePopupShowing, parentBackgroundColor: $backgroundColor)
-            }
-            if isCouponPopupShowing {
-                CouponPopupView(isPresent: $isCouponPopupShowing, parentBackgroundColor: $backgroundColor)
-            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .background(Color.white)
+            .edgesIgnoringSafeArea(.all)
+            .fullScreenCover(isPresented: $showingModal, content: PopupView.init)
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(backgroundColor)
-        .ignoresSafeArea()
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
